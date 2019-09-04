@@ -1,0 +1,4 @@
+详细见：https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.replace.html
+
+需求：表列behavior_type中数据有1，2,3,4四种，分别表示'pv'浏览 , 'fav'收藏,'cart'加购,'pay'支付，要用pv,fav,cart,pay代替原来的数字
+解决：df1=df.replace({'behavior_type': {1:'pv' , 2:'fav',3:'cart',4:'pay'}})  ##用另一张表来存储数据
