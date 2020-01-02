@@ -1,0 +1,10 @@
+合并一个Excel文件中的多个Sheet
+
+
+import pandas as pd
+import numpy as np
+workbook_url = r'C:\Users\ocs\Desktop\2019年11月到付数据.xlsx'
+single_df = pd.read_excel(workbook_url, sheet_name='GAN') --读取单个sheet
+all_dfs = pd.read_excel(workbook_url, sheet_name=None)  --读取所有sheet
+df = pd.concat(pd.read_excel(workbook_url, sheet_name=None), ignore_index=True)   
+df.to_excel(r'C:\Users\ocs\Desktop\pd_sheet合并.xlsx',encoding = 'gb2312')
